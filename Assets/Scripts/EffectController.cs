@@ -17,7 +17,7 @@ public class EffectController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // 0 is the left mouse button
+        /* if (Input.GetMouseButtonDown(0)) // 0 is the left mouse button
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = 10;
@@ -25,7 +25,16 @@ public class EffectController : MonoBehaviour
             // Instantiate the particle effect at the mouse position
             GameObject instantiatedEffect = Instantiate(woodPiecesEffect, mousePosition, Quaternion.identity);
             Destroy(instantiatedEffect, 2.0f);
-        }
+        } */
+    }
+
+    public void ChopWoodEffect(Vector2 chopPosition) {
+        Vector3 mousePosition = chopPosition;
+        mousePosition.z = 10;
+
+        // Instantiate the particle effect at the mouse position
+        GameObject instantiatedEffect = Instantiate(woodPiecesEffect, mousePosition, Quaternion.identity);
+        Destroy(instantiatedEffect, 2.0f);
     }
 
     public void SpawnProfitSpark(string playerID) {
