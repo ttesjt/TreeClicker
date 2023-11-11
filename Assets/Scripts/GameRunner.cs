@@ -42,7 +42,9 @@ public class GameRunner : MonoBehaviour
     }
 
     public void HealTheEarth(int amount) {
-        
+        earthHealth += amount;
+        float healthBarFillAmount = (float)earthHealth / (float)maxEarthHealth;
+        earthFill.fillAmount = healthBarFillAmount;
     }
 
     public void WinGame(string playerID) {
