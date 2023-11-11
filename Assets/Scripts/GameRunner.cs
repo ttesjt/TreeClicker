@@ -8,14 +8,17 @@ public class GameRunner : MonoBehaviour
 {
     public static GameRunner currentInstance;
     public static int profitToWin = 100;
-    public static int earthHealth = 100; // a random huge number.
-    public static int maxEarthHealth = 100;
+    public static int earthHealth = 200; // a random huge number.
+    public static int maxEarthHealth = 200;
 
     public static string winner = "";
+
+    public EffectController effectController;
 
     public GameObject finalStage;
     public TextMeshProUGUI finalStageDisplay;
     public Image earthFill;
+
 
     // Start is called before the first frame update
     void Start()

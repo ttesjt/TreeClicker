@@ -47,6 +47,16 @@ public class PlayerClick : MonoBehaviour
         GameRunner.currentInstance.DamageTheEarth(amount);
     }
 
+    // should cost.
+    private bool SpendProfits(int amount) {
+        if (profitValue >= amount) {
+            profitValue -= amount;
+            GameRunner.currentInstance.effectController.SpawnProfitSpark(playerID);
+            return true;
+        }
+        return false;
+    }
+
     public void PlayerClicked() {
         CutTrees(deltaChangePerClick);
         UpdateValues();
@@ -61,17 +71,15 @@ public class PlayerClick : MonoBehaviour
     }
 
     public void BuyChainSaw() {
-        if (profitValue >= chainsawCost) {
+        if (SpendProfits(chainsawCost)) {
             chainsawLevel += 1;
-            profitValue -= chainsawCost;
             UpdateValues();
         }
     }
 
     public void BuyMultiplier() {
-        if (profitValue >= multiplierCost) {
+        if (SpendProfits(multiplierCost)) {
             deltaChangePerClick += 1;
-            profitValue -= multiplierCost;
             UpdateValues();
         }
     }
