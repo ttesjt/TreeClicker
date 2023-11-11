@@ -12,6 +12,8 @@ public class CustomCursor : MonoBehaviour
     public int minY = 0, maxY = 1080;
     public float mouseMoveSpeed = 10f;
 
+    float mouseSpeedMin = 0.5f, mouseSpeedMax = 9f;
+
     private void Start() 
     {
         Cursor.visible = false;
@@ -20,13 +22,11 @@ public class CustomCursor : MonoBehaviour
     private void Update() 
     {
         Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
-        
+        float cursorSpeed = Mathf.Clamp(mouseDelta.magnitude, mouseSpeedMin, mouseSpeedMax);
+        Debug.Log(cursorSpeed);
 
-        // Update the cursor's position based on the mouse delta
-        cursorImage.rectTransform.anchoredPosition += mouseDelta.normalized * mouseMoveSpeed * Time.deltaTime;
+        cursorImage.rectTransform.anchoredPosition += mouseDelta.normalized * mouseMoveSpeed * cursorSpeed * Time.deltaTime;
 
-        // Optionally, clamp the position to ensure it stays within screen bounds
-        // You will need to calculate minX, maxX, minY, maxY based on your canvas and cursor image size
         cursorImage.rectTransform.anchoredPosition = new Vector2(
             Mathf.Clamp(cursorImage.rectTransform.anchoredPosition.x, minX, maxX),
             Mathf.Clamp(cursorImage.rectTransform.anchoredPosition.y, minY, maxY));
@@ -43,9 +43,6 @@ public class CustomCursor : MonoBehaviour
         GameRunner.currentInstance.effectController.ChopWoodEffect(clickPoint.rectTransform.position); // click here
         var results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, results);
-
-        Debug.Log(results.Count);
-
 
         foreach (RaycastResult result in results)
         {

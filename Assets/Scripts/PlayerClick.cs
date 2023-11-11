@@ -14,22 +14,29 @@ public class PlayerClick : MonoBehaviour
     public GameObject finalStage;
     public TextMeshProUGUI winText;
 
+    public List<Upgrades> allUpgrades;
+
     private int chainsawLevel = 0, chainsawCost = 10; // todo. a class.
     private int multiplierCost = 10; // todo. a class.
     private float deltaTimeSecond = 0;
 
-
     private int deltaChangePerClick = 1;
+
+    public int ProfitValue {get{return profitValue;} set{profitValue = value;}}
+    public int DeltaChangePerClick {get{return deltaChangePerClick;} set{deltaChangePerClick = value;}}
 
     void Start() {
         deltaTimeSecond = 0;
     }
 
     void Update() {
-
         deltaTimeSecond+=Time.deltaTime;
         if (deltaTimeSecond >= 1f) {
-            CutTrees(chainsawLevel);
+            // CutTrees(chainsawLevel);
+            foreach (Upgrades upgrade in allUpgrades) {
+                CutTrees(upgrade.autoClickRate);
+                HealTheEarth(upgrade.autoHealRate);
+            }
             deltaTimeSecond = 0;
         }
         UpdateValues();
@@ -47,8 +54,12 @@ public class PlayerClick : MonoBehaviour
         GameRunner.currentInstance.DamageTheEarth(amount);
     }
 
+    private void HealTheEarth(int amount) {
+        GameRunner.currentInstance.HealTheEarth(amount);
+    }
+
     // should cost.
-    private bool SpendProfits(int amount) {
+    public bool SpendProfits(int amount) {
         if (profitValue >= amount) {
             profitValue -= amount;
             GameRunner.currentInstance.effectController.SpawnProfitSpark(playerID);
@@ -70,7 +81,7 @@ public class PlayerClick : MonoBehaviour
         }
     }
 
-    public void BuyChainSaw() {
+    /* public void BuyChainSaw() {
         if (SpendProfits(chainsawCost)) {
             chainsawLevel += 1;
             UpdateValues();
@@ -82,7 +93,7 @@ public class PlayerClick : MonoBehaviour
             deltaChangePerClick += 1;
             UpdateValues();
         }
-    }
+    } */
 
     private void UpdateValues() {
         if (fillBar != null)
