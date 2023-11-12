@@ -7,9 +7,9 @@ using TMPro;
 public class GameRunner : MonoBehaviour
 {
     public static GameRunner currentInstance;
-    public static int profitToWin = 1000;
-    public static int earthHealth = 1000; // a random huge number.
-    public static int maxEarthHealth = 1200;
+    public static int profitToWin = 500;
+    public static int earthHealth = 800; // a random huge number.
+    public static int maxEarthHealth = 800;
 
     public static string winner = "";
 
@@ -54,14 +54,14 @@ public class GameRunner : MonoBehaviour
         if (winner == "") {
             winner = playerID;
             finalStage.SetActive(true);
-            finalStageDisplay.text = playerID + " has won!!";
+            finalStageDisplay.text = playerID + ", thanks to your genius business acumen, you were able to annihilate the competition and monopolize the entire industry. Woohoo!!";
         }
     }
 
     public void LoseGame() {
         if (winner == "") {
             finalStage.SetActive(true);
-            finalStageDisplay.text = " You all dead ";
+            finalStageDisplay.text = "In your reckless pursuits for profit, you both managed to ruin the entire earth, killing everyone in the process. Great going genius.";
         }
     }
 }
