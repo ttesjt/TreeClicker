@@ -14,6 +14,9 @@ public class OfferBoard : MonoBehaviour
     public Image timerIcon;
     private GameObject currentOfferUI;
 
+    public AudioSource audioSource;
+    public AudioClip offerShowUpClip, takeOfferClip, cannotAffordClip;
+
     public bool isPlayer1 = true;
     private Upgrades currentOffer;
     private Vector3 startPosition;
@@ -69,6 +72,7 @@ public class OfferBoard : MonoBehaviour
                     // Cooldown expired, ready for next offer
                     if (FindNextUpgrade()) {
                         StartMove(hide, show, offerContainerMoveSpeed);
+                        if (offerShowUpClip) { audioSource.PlayOneShot(offerShowUpClip); }
                         // instanciate the UI element currentOffer.UIPrefab inside of the container with exactly same position
                         InstantiateCurrentOffer();
                         offerReady = true;
@@ -78,6 +82,7 @@ public class OfferBoard : MonoBehaviour
         } else if (FindNextUpgrade()) {
             // as there is offer Timer, whenever an offer is ready, just push it.
             StartMove(hide, show, offerContainerMoveSpeed);
+            if (offerShowUpClip) { audioSource.PlayOneShot(offerShowUpClip); }
             InstantiateCurrentOffer();
             offerReady = true;
         }
@@ -110,10 +115,12 @@ public class OfferBoard : MonoBehaviour
 
     public void TakeTheOffer() {
         if (currentOffer.PurchasedUpgrade()) {
+            if (takeOfferClip) { audioSource.PlayOneShot(takeOfferClip); }
             StartMove(show, hide, offerContainerMoveSpeed);
             offerReady = false; // took the offer. this is enough to generate next.
             // Buy algorithm goes here.
         } else {
+            if (cannotAffordClip) { audioSource.PlayOneShot(cannotAffordClip); }
             Debug.Log("GO CHOP MORE TREES YOU BROKEN LITTLE FIRM");
         }
     }

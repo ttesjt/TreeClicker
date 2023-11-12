@@ -10,6 +10,13 @@ public class PlayerClick : MonoBehaviour
     public Slider fillBar;
     public TextMeshProUGUI profitText;
 
+    public AudioSource audio;
+    public AudioClip chopWoodClip;
+
+    public RectTransform canvasMainRectTransform;
+    public GameObject floatingTextPrefab;
+    public Image cursorImage;
+
     private int profitValue = 0;
 
 
@@ -78,6 +85,14 @@ public class PlayerClick : MonoBehaviour
     }
 
     public void PlayerClicked() {
+        if (chopWoodClip) {audio.PlayOneShot(chopWoodClip);}
+        GameObject floatingTextInstance = Instantiate(floatingTextPrefab, cursorImage.rectTransform);
+        floatingTextInstance.transform.localPosition = Vector3.zero; // Set position to center of container
+        // floatingTextInstance.transform.localScale = Vector3.one;
+        floatingTextInstance.transform.parent = canvasMainRectTransform;
+        floatingTextInstance.GetComponent<FloatingTextEditing>().setValue(deltaChangePerClick);
+
+        Destroy(floatingTextInstance.gameObject, 0.5f);
         CutTrees(deltaChangePerClick);
         UpdateValues();
     }
