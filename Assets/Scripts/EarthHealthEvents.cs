@@ -7,6 +7,8 @@ public class EarthHealthEvents : MonoBehaviour
 {
     public List<float> eventsHealthRatio;
     public List<UnityEvent> events;
+    public AudioSource audio;
+    public AudioClip dangerousClip;
 
     public Animator earthContainerAnimator;
 
@@ -23,6 +25,12 @@ public class EarthHealthEvents : MonoBehaviour
                 eventsHealthRatio.RemoveAt(0);
                 events.RemoveAt(0);
             }
+        }
+    }
+
+    public void PlayDangerousClip() {
+        if (dangerousClip) {
+            audio.PlayOneShot(dangerousClip);
         }
     }
 }

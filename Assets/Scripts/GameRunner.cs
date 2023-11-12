@@ -7,9 +7,12 @@ using TMPro;
 public class GameRunner : MonoBehaviour
 {
     public static GameRunner currentInstance;
-    public static int profitToWin = 500;
-    public static int earthHealth = 800; // a random huge number.
-    public static int maxEarthHealth = 800;
+    public int profitToWin = 500;
+    public int earthHealth = 800; // a random huge number.
+    public int maxEarthHealth = 800;
+
+    public AudioSource audio;
+    public AudioClip winClip, loseClip;
 
     public static string winner = "";
 
@@ -52,6 +55,7 @@ public class GameRunner : MonoBehaviour
 
     public void WinGame(string playerID) {
         if (winner == "") {
+            if (winClip) {audio.PlayOneShot(winClip);}
             winner = playerID;
             finalStage.SetActive(true);
             finalStageDisplay.text = playerID + ", thanks to your genius business acumen, you were able to annihilate the competition and monopolize the entire industry. Woohoo!!";
@@ -60,6 +64,7 @@ public class GameRunner : MonoBehaviour
 
     public void LoseGame() {
         if (winner == "") {
+            if (loseClip) {audio.PlayOneShot(loseClip);}
             finalStage.SetActive(true);
             finalStageDisplay.text = "In your reckless pursuits for profit, you both managed to ruin the entire earth, killing everyone in the process. Great going genius.";
         }

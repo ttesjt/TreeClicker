@@ -82,7 +82,7 @@ public class PlayerClick : MonoBehaviour
         }
         UpdateValues();
 
-        if (profitValue >= GameRunner.profitToWin) {
+        if (profitValue >= GameRunner.currentInstance.profitToWin) {
             if (!finalStage.activeSelf) {
                 GameRunner.currentInstance.WinGame(playerID);
             }
@@ -175,7 +175,7 @@ public class PlayerClick : MonoBehaviour
     private void UpdateValues() {
         if (fillBar != null)
         {
-            fillBar.value = (float)profitValue / (float)GameRunner.profitToWin; // Increase the slider's value by 0.1
+            fillBar.value = (float)profitValue / (float)GameRunner.currentInstance.profitToWin; // Increase the slider's value by 0.1
         }
         UpdateProfitText();
         UpdateUpgradeStatus();
