@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6773807890509040394, guid: 0440bb8ea272c2948aae67e2b3bd0bae, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Chainsaw Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 6773807892052702132, guid: 0440bb8ea272c2948aae67e2b3bd0bae, type: 3}
       propertyPath: m_Sprite

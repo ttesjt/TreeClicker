@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6894871575722189884, guid: e7a09aa9218c0db43b6629424ed2ebf6, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Non-profit
       objectReference: {fileID: 0}
     - target: {fileID: 6894871575722189887, guid: e7a09aa9218c0db43b6629424ed2ebf6, type: 3}
       propertyPath: m_Pivot.x

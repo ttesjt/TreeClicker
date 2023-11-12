@@ -97,7 +97,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7959541296362815590, guid: 791cba83f85e1104eaac5ea4d525d445, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Lobby Upgrade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 791cba83f85e1104eaac5ea4d525d445, type: 3}

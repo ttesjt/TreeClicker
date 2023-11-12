@@ -9,11 +9,14 @@ public class PlayerClick : MonoBehaviour
     public string playerID = "";
     public Slider fillBar;
     public TextMeshProUGUI profitText;
+
     private int profitValue = 0;
+
 
     public GameObject finalStage;
     public TextMeshProUGUI winText;
 
+    public OfferBoard offerBoard;
     public List<Upgrades> allUpgrades;
 
     private int chainsawLevel = 0, chainsawCost = 10; // todo. a class.

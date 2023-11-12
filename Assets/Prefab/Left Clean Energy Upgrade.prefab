@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4855752791861255939, guid: bd6c7745ccc4b8544bb286af31f80ccd, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Clean Energy Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 7991574312663120956, guid: bd6c7745ccc4b8544bb286af31f80ccd, type: 3}
       propertyPath: m_text

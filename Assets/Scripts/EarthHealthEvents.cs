@@ -12,10 +12,10 @@ public class EarthHealthEvents : MonoBehaviour
 
     public void ShowEarthContainer() {
         earthContainerAnimator.SetBool("Appeared", true);
+        GameRunner.currentInstance.EarthShowUp = true;
     }
 
     public void CheckForEvents(float healthRatio) { // 0 - 1
-        Debug.Log(healthRatio);
         healthRatio = Mathf.Clamp(healthRatio, 0, 1f);
         if (eventsHealthRatio.Count > 0 && events.Count > 0) {
             if (eventsHealthRatio[0] >= healthRatio) {

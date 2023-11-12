@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 5298016497005083303}
   - component: {fileID: 5298016497005083225}
   - component: {fileID: 5298016497005083302}
+  - component: {fileID: -7837810838606686915}
   m_Layer: 5
   m_Name: Left Upgrade
   m_TagString: Untagged
@@ -293,6 +294,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-7837810838606686915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5298016497005083300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1733907e76c2a1349964c160b2606767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceTag: {fileID: 5298016498760644702}
 --- !u!1 &5298016497877893656
 GameObject:
   m_ObjectHideFlags: 0

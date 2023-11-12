@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1834062237677547880, guid: f9f39e832c8ee3e4f9a20b8fe6cfb2f7, type: 3}
+      propertyPath: priceTag
+      value: 
+      objectReference: {fileID: 6773807891178277360}
     - target: {fileID: 5298016497005083300, guid: f9f39e832c8ee3e4f9a20b8fe6cfb2f7, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Bulldozer Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 5298016497005083303, guid: f9f39e832c8ee3e4f9a20b8fe6cfb2f7, type: 3}
       propertyPath: m_Pivot.x
@@ -97,3 +101,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9f39e832c8ee3e4f9a20b8fe6cfb2f7, type: 3}
+--- !u!114 &6773807891178277360 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5298016498760644702, guid: f9f39e832c8ee3e4f9a20b8fe6cfb2f7, type: 3}
+  m_PrefabInstance: {fileID: 1695380461999763886}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -19,6 +19,8 @@ public class GameRunner : MonoBehaviour
     public GameObject finalStage;
     public TextMeshProUGUI finalStageDisplay;
     public Image earthFill;
+    private bool earthShowUp = false;
+    public bool EarthShowUp {get{return earthShowUp;} set{earthShowUp = value;}}
 
 
     // Start is called before the first frame update

@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4106737113206954600, guid: b5466d2d01f35ea4fa2c46114642b4d2, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Green Laws Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 4106737113206954603, guid: b5466d2d01f35ea4fa2c46114642b4d2, type: 3}
       propertyPath: m_Pivot.x

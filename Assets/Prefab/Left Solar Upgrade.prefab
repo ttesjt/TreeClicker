@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 773135878053626780, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_Name
-      value: Left Upgrades
+      value: Left Solar Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 773135878053626783, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_Pivot.x
