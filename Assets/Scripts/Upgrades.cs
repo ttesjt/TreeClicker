@@ -6,52 +6,31 @@ public class Upgrades : MonoBehaviour
 {
     public PlayerClick player;
 
-    public int autoClickRate = 0;
-    public int autoHealRate = 0;
+    public int baseAutoClickRate = 0;
+    public int baseCost = 10;
+    public double costMultiplierPerLevel = 1.5;
+    public int currentPurchaseLevel = 0;
     public int additionalClick = 0;
-    private CostAndEffects currentPurchaseLevel = null;
-
-    private List<CostAndEffects> costs = new List<CostAndEffects>();
+    public int healEarthAmount = 0;
 
     // Start is called before the first frame update
     void Start() {
-        LoadCosts();
-        currentPurchaseLevel = GetNextUpgrade();
     }
 
     // no check, but should advanced to the next level.
     public void PurchasedUpgrade() {
-        if (currentPurchaseLevel) {
-            if (player.SpendProfits(currentPurchaseLevel.cost)) {
-                // made the purchase...
-                autoClickRate += currentPurchaseLevel.autoClickAddition;
-                autoHealRate += currentPurchaseLevel.healEarthAddition;
-                player.DeltaChangePerClick += currentPurchaseLevel.additionalClick;
-            }
-        }
-        currentPurchaseLevel = GetNextUpgrade();
-    }
-
-    public CostAndEffects GetCurrentPurchaseLevel() {
-        return currentPurchaseLevel;
-    }
-
-    private void LoadCosts() {
-        CostAndEffects[] foundCosts = GetComponentsInChildren<CostAndEffects>(true);
-        foreach (var cost in foundCosts)
-        {
-            if (cost != null) {
-                costs.Add(cost);
-            }
+        if (player.SpendProfits(getCurrentCost())) {
+            currentPurchaseLevel++;
+            player.DeltaChangePerClick += additionalClick;
         }
     }
 
-    private CostAndEffects GetNextUpgrade() {
-        if (costs.Count > 0) {
-            CostAndEffects cost = costs[0];
-            costs.RemoveAt(0);
-            return cost;
-        }
-        return null;
+    public int getCurrentCost() {
+        return (int) ((double)baseCost * costMultiplierPerLevel);
+    }
+
+    public int getCurrentAutoClickRate()
+    {
+        return baseAutoClickRate * currentPurchaseLevel;
     }
 }

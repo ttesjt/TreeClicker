@@ -1352,7 +1352,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 111741008}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &624795922
 GameObject:
@@ -2820,7 +2823,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 111741008}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &1121649192
 GameObject:
@@ -2949,7 +2955,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 111741008}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &1212871226
 GameObject:
@@ -3917,7 +3926,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 624795925}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &1729668688
 GameObject:
@@ -3950,7 +3962,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 624795925}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!4 &1729668690
 Transform:
@@ -4223,7 +4238,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 111741008}
   autoClickRate: 0
-  autoHealRate: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &1904327009
 GameObject:
@@ -4453,8 +4471,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 624795925}
   autoClickRate: 0
-  autoHealRate: 0
-  additionalClick: 0
+  baseCost: 10
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 0
+  currentPurchaseLevel: 1
+  additionalClick: 1
 --- !u!1 &2049391263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4504,8 +4525,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 624795925}
-  autoClickRate: 0
-  autoHealRate: 0
+  autoClickRate: 25
+  baseCost: 35
+  costIncreasePerLevel: 1.5
+  autoClickFrequencyIncreasePerLevel: 1
+  currentPurchaseLevel: 1
   additionalClick: 0
 --- !u!1 &2099055779
 GameObject:

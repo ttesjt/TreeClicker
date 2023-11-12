@@ -34,8 +34,8 @@ public class PlayerClick : MonoBehaviour
         if (deltaTimeSecond >= 1f) {
             // CutTrees(chainsawLevel);
             foreach (Upgrades upgrade in allUpgrades) {
-                CutTrees(upgrade.autoClickRate);
-                HealTheEarth(upgrade.autoHealRate);
+                CutTrees(upgrade.getCurrentAutoClickRate());
+                HealTheEarth(upgrade.healEarthAmount);
             }
             deltaTimeSecond = 0;
         }
