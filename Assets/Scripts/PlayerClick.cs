@@ -139,7 +139,7 @@ public class PlayerClick : MonoBehaviour
     {
         if (profitText != null)
         {
-            profitText.text = profitValue.ToString();
+            profitText.text = "$" + profitValue.ToString();
         }
     }
 
