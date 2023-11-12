@@ -20,8 +20,8 @@ public class EarthHealthEvents : MonoBehaviour
         if (eventsHealthRatio.Count > 0 && events.Count > 0) {
             if (eventsHealthRatio[0] >= healthRatio) {
                 events[0].Invoke();
-                eventsHealthRatio.RemoveAt(0);;
-                events.RemoveAt(0);;
+                eventsHealthRatio.RemoveAt(0);
+                events.RemoveAt(0);
             }
         }
     }

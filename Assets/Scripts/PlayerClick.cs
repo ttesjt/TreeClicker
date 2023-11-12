@@ -31,6 +31,13 @@ public class PlayerClick : MonoBehaviour
     public int ProfitValue {get{return profitValue;} set{profitValue = value;}}
     public int DeltaChangePerClick {get{return deltaChangePerClick;} set{deltaChangePerClick = value;}}
 
+    private int chainsawNum = 0;
+    private int workersNum = 0;
+    private int factoryNum = 0;
+    public TextMeshProUGUI chainsawNumText;
+    public TextMeshProUGUI workersNumText;
+    public TextMeshProUGUI factoryNumText;
+
     void Start() {
         deltaTimeSecond = 0;
     }
@@ -44,6 +51,19 @@ public class PlayerClick : MonoBehaviour
                 currentAutoRate += upgrade.getCurrentAutoClickRate();
                 CutTrees(upgrade.getCurrentAutoClickRate());
                 HealTheEarth(upgrade.healEarthAmount);
+
+                switch (upgrade.upgradeId)
+                {
+                    case "chainsaw":
+                        chainsawNum = upgrade.currentPurchaseLevel;
+                        break;
+                    case "workers":
+                        workersNum = upgrade.currentPurchaseLevel;
+                        break;
+                    case "factory":
+                        factoryNum = upgrade.currentPurchaseLevel;
+                        break;
+                }
             }
             deltaTimeSecond = 0;
             autoClickRate = currentAutoRate;
@@ -94,6 +114,22 @@ public class PlayerClick : MonoBehaviour
         }
     }
 
+    private void UpgradeCountDisplay()
+    {
+        if (chainsawNumText)
+        {
+            chainsawNumText.text = "x" + chainsawNum.ToString();
+        }
+        if (workersNumText)
+        {
+            workersNumText.text = "x" + workersNum.ToString();
+        }
+        if (factoryNumText)
+        {
+            factoryNumText.text = "x" + factoryNum.ToString();
+        }
+    }
+
     private void UpdateProfitText()
     {
         if (profitText != null)
@@ -123,5 +159,6 @@ public class PlayerClick : MonoBehaviour
         }
         UpdateProfitText();
         UpdateUpgradeStatus();
+        UpgradeCountDisplay();
     }
 }

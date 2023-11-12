@@ -9,10 +9,11 @@ public class Upgrades : MonoBehaviour
     public PlayerClick player;
     public GameObject UIPrefab;
 
+    public string upgradeId = "";
     public int baseAutoClickRate = 0;
     public int baseCost = 10;
     public float costMultiplierPerLevel = 1.5f;
-    public float minRate = 0.5f, maxRate = 2f;
+    public float minRate = 1.0f, maxRate = 1f; // I'm removing random for now
     public int currentPurchaseLevel = 0;
     public int additionalClick = 0;
     public int healEarthAmount = 0;
