@@ -23,8 +23,7 @@ public class CustomCursor : MonoBehaviour
     {
         Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         float cursorSpeed = Mathf.Clamp(mouseDelta.magnitude, mouseSpeedMin, mouseSpeedMax);
-        Debug.Log(cursorSpeed);
-
+        
         cursorImage.rectTransform.anchoredPosition += mouseDelta.normalized * mouseMoveSpeed * cursorSpeed * Time.deltaTime;
 
         cursorImage.rectTransform.anchoredPosition = new Vector2(

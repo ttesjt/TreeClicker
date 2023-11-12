@@ -14,6 +14,7 @@ public class GameRunner : MonoBehaviour
     public static string winner = "";
 
     public EffectController effectController;
+    public EarthHealthEvents earthHealthEvents;
 
     public GameObject finalStage;
     public TextMeshProUGUI finalStageDisplay;
@@ -29,7 +30,7 @@ public class GameRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        earthHealthEvents.CheckForEvents((float)earthHealth/(float)maxEarthHealth);
     }
 
     public void DamageTheEarth(int amount) {
