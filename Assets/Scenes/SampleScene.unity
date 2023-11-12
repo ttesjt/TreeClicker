@@ -8373,7 +8373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventsHealthRatio:
-  - 0.5
+  - 0.7
   events:
   - m_PersistentCalls:
       m_Calls:
