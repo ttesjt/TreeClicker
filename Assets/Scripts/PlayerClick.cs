@@ -23,7 +23,10 @@ public class PlayerClick : MonoBehaviour
     private int multiplierCost = 10; // todo. a class.
     private float deltaTimeSecond = 0;
 
+    public TextMeshProUGUI clickMultiplierText;
+    public TextMeshProUGUI autoClickRateText;
     private int deltaChangePerClick = 1;
+    private int autoClickRate = 0;
 
     public int ProfitValue {get{return profitValue;} set{profitValue = value;}}
     public int DeltaChangePerClick {get{return deltaChangePerClick;} set{deltaChangePerClick = value;}}
@@ -35,12 +38,15 @@ public class PlayerClick : MonoBehaviour
     void Update() {
         deltaTimeSecond+=Time.deltaTime;
         if (deltaTimeSecond >= 1f) {
+            int currentAutoRate = 0;
             // CutTrees(chainsawLevel);
             foreach (Upgrades upgrade in allUpgrades) {
+                currentAutoRate += upgrade.getCurrentAutoClickRate();
                 CutTrees(upgrade.getCurrentAutoClickRate());
                 HealTheEarth(upgrade.healEarthAmount);
             }
             deltaTimeSecond = 0;
+            autoClickRate = currentAutoRate;
         }
         UpdateValues();
 
@@ -76,6 +82,18 @@ public class PlayerClick : MonoBehaviour
         UpdateValues();
     }
 
+    private void UpdateUpgradeStatus()
+    {
+        if (clickMultiplierText)
+        {
+            clickMultiplierText.text = deltaChangePerClick.ToString() + "/click";
+        }
+        if(autoClickRateText)
+        {
+            autoClickRateText.text = autoClickRate.ToString() + "/s";
+        }
+    }
+
     private void UpdateProfitText()
     {
         if (profitText != null)
@@ -104,5 +122,6 @@ public class PlayerClick : MonoBehaviour
             fillBar.value = (float)profitValue / (float)GameRunner.profitToWin; // Increase the slider's value by 0.1
         }
         UpdateProfitText();
+        UpdateUpgradeStatus();
     }
 }
