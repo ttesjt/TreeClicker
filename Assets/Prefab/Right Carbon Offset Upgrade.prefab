@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Carbon Offset Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 4599768439456679050, guid: 65316587af02d8c46a94137f91bc16c3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8862745
+      objectReference: {fileID: 0}
     - target: {fileID: 4599768439456679051, guid: 65316587af02d8c46a94137f91bc16c3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

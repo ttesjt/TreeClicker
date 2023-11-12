@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left Carbon Offset Upgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 5849846048298794274, guid: 1468cdf0d632c5a42be7fb78332ed0da, type: 3}
+      propertyPath: m_Color.b
+      value: 0.88101023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849846048298794274, guid: 1468cdf0d632c5a42be7fb78332ed0da, type: 3}
+      propertyPath: m_Color.g
+      value: 0.23444201
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849846048298794274, guid: 1468cdf0d632c5a42be7fb78332ed0da, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9254902
+      objectReference: {fileID: 0}
     - target: {fileID: 5849846048298794275, guid: 1468cdf0d632c5a42be7fb78332ed0da, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
