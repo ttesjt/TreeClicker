@@ -54,14 +54,14 @@ public class GameRunner : MonoBehaviour
         if (winner == "") {
             winner = playerID;
             finalStage.SetActive(true);
-            finalStageDisplay.text = playerID + " has won!!";
+            finalStageDisplay.text = playerID + ", thanks to your genius business acumen, you were able to annihilate the competition and monopolize the entire industry. Woohoo!!";
         }
     }
 
     public void LoseGame() {
         if (winner == "") {
             finalStage.SetActive(true);
-            finalStageDisplay.text = " You all dead ";
+            finalStageDisplay.text = "In your reckless pursuits for profit, you both managed to ruin the entire earth, killing everyone in the process. Great going genius.";
         }
     }
 }
