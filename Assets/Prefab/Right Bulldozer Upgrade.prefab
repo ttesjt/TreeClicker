@@ -93,7 +93,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7764393592289418410, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
       propertyPath: m_Name
-      value: Right Upgrades
+      value: Right Bulldozer Upgrade
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469264, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469264, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469265, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 112.6935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469265, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469265, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393592685469265, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000076294
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393593275319603, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9961947
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393593275319603, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.08715578
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393593275319603, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764393593275319603, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7764393593429861396, guid: cbb94fb6e7f4a9e46afa5c68f421c422, type: 3}
       propertyPath: m_Sprite

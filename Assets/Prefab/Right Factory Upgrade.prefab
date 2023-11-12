@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460001889983, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_Name
-      value: Right Upgrades
+      value: Right Factory Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460606518784, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_Pivot.x
@@ -177,19 +177,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460962633510, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9848078
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460962633510, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17364816
+      value: 0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460962633510, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 249
+      value: -160
       objectReference: {fileID: 0}
     - target: {fileID: 1853624460962633510, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853624461481184324, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853624461481184324, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853624461481184325, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1853624461481184325, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3764370132638952832, guid: 6e1f2340f31d35540b7e469722855bf3, type: 3}
       propertyPath: m_HorizontalAlignment
