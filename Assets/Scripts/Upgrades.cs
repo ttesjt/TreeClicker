@@ -9,13 +9,16 @@ public class Upgrades : MonoBehaviour
     public PlayerClick player;
     public GameObject UIPrefab;
 
+    public string upgradeId = "";
     public int baseAutoClickRate = 0;
     public int baseCost = 10;
     public float costMultiplierPerLevel = 1.5f;
-    public float minRate = 0.5f, maxRate = 2f;
+    public float minRate = 1.0f, maxRate = 1.0f; // I'm removing random for now
     public int currentPurchaseLevel = 0;
     public int additionalClick = 0;
     public int healEarthAmount = 0;
+
+    public bool healIsReady = false;
 
 
     public int availableAfterProfitLevel = -1; // no.
@@ -44,6 +47,10 @@ public class Upgrades : MonoBehaviour
     public bool PurchasedUpgrade() {
         if (player.SpendProfits(GetPriceAfterInflation())) {
             currentPurchaseLevel++;
+            if(healEarthAmount > 0)
+            {
+                healIsReady = true;
+            }
             player.DeltaChangePerClick += additionalClick;
             return true;
         }
@@ -52,7 +59,8 @@ public class Upgrades : MonoBehaviour
 
     // just for more fun, I added a RNG factor to the cost
     public void SetCurrentCost(GameObject labalInstance) {
-        currentPrice = (int) ((float)baseCost * costMultiplierPerLevel * Random.Range(minRate, maxRate)); // remove it if needed.
+        // currentPrice = (int) ((float)baseCost * costMultiplierPerLevel * Random.Range(minRate, maxRate)); // remove it if needed.
+        currentPrice = (int)((float)baseCost * costMultiplierPerLevel);
         labalInstance.GetComponent<UpgradeLabel>().SetPrice(currentPrice);
     }
 
