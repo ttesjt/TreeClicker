@@ -9,7 +9,7 @@ public class Upgrades : MonoBehaviour
     public int baseAutoClickRate = 0;
     public int baseCost = 10;
     public double costMultiplierPerLevel = 1.5;
-    public int currentPurchaseLevel = 1;
+    public int currentPurchaseLevel = 0;
     public int additionalClick = 0;
     public int healEarthAmount = 0;
 
@@ -20,8 +20,8 @@ public class Upgrades : MonoBehaviour
     // no check, but should advanced to the next level.
     public void PurchasedUpgrade() {
         if (player.SpendProfits(getCurrentCost())) {
-            player.DeltaChangePerClick += additionalClick;
             currentPurchaseLevel++;
+            player.DeltaChangePerClick += additionalClick;
         }
     }
 
