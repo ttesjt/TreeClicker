@@ -589,6 +589,7 @@ MonoBehaviour:
   playerID: Player 2
   fillBar: {fileID: 692028963}
   profitText: {fileID: 746632347}
+  earthDamageRatio: 1
   finalStage: {fileID: 1644463967}
   winText: {fileID: 480084056}
   offerBoard: {fileID: 59908658}
@@ -1409,6 +1410,7 @@ GameObject:
   - component: {fileID: 276567342}
   - component: {fileID: 276567344}
   - component: {fileID: 276567343}
+  - component: {fileID: 276567345}
   m_Layer: 5
   m_Name: Tutorial Overlay
   m_TagString: Untagged
@@ -1476,6 +1478,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276567341}
   m_CullTransparentMesh: 1
+--- !u!114 &276567345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276567341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9f4775a4ff93945b33ff38636faa27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  self: {fileID: 276567341}
 --- !u!1 &310470740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,6 +3140,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &600089884
@@ -3186,6 +3202,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 1
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 10
   availableAfterEarthShowUp: 0
 --- !u!1 &624795922
@@ -3311,6 +3328,7 @@ MonoBehaviour:
   playerID: Player 1
   fillBar: {fileID: 1041282580}
   profitText: {fileID: 776905733}
+  earthDamageRatio: 1
   finalStage: {fileID: 1644463967}
   winText: {fileID: 480084056}
   offerBoard: {fileID: 1428148551}
@@ -5674,6 +5692,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 5
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1115215918
@@ -5897,6 +5916,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 15
   availableAfterEarthShowUp: 0
 --- !u!1 &1190556531
@@ -7443,6 +7463,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1559777125
@@ -7838,6 +7859,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 15
   availableAfterEarthShowUp: 0
 --- !u!1 &1729668688
@@ -7880,6 +7902,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 5
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!4 &1729668690
@@ -7960,6 +7983,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1784999035
@@ -8231,6 +8255,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 35
   availableAfterEarthShowUp: 0
 --- !u!1 &1904327009
@@ -8348,7 +8373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventsHealthRatio:
-  - 0.8
+  - 0.5
   events:
   - m_PersistentCalls:
       m_Calls:
@@ -8550,6 +8575,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 1
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 10
   availableAfterEarthShowUp: 0
 --- !u!1 &2028042306
@@ -8695,6 +8721,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 35
   availableAfterEarthShowUp: 0
 --- !u!1 &2061745381
@@ -8979,6 +9006,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &2135481652
