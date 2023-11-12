@@ -98,26 +98,62 @@ PrefabInstance:
     - target: {fileID: 773135878656719650, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 131dd3d43ed80b741b1c18527b53463b, type: 3}
+      objectReference: {fileID: 21300000, guid: 95f93f26bba934c4ea762dfc2b5444ee, type: 3}
     - target: {fileID: 773135878656719651, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 158
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 773135878656719651, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 158
+      value: 210
       objectReference: {fileID: 0}
     - target: {fileID: 773135878656719651, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 187
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 773135878656719651, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -82
+      value: -110
+      objectReference: {fileID: 0}
+    - target: {fileID: 773135878980327941, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 773135878980327941, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 773135878980327941, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -190
+      objectReference: {fileID: 0}
+    - target: {fileID: 773135878980327941, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 773135878980327941, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427607979083907615, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 481.6268
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427607979083907615, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1427607979083907615, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 2827809684282712227, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
       propertyPath: m_text
       value: Invest in solar energy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827809684282712227, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 1024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}

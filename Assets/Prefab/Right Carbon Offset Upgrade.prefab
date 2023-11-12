@@ -9,11 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1319966005219682231, guid: 65316587af02d8c46a94137f91bc16c3, type: 3}
       propertyPath: m_text
-      value: Invest in wind power
+      value: Buy carbon offsets
       objectReference: {fileID: 0}
     - target: {fileID: 4599768439456679048, guid: 65316587af02d8c46a94137f91bc16c3, type: 3}
       propertyPath: m_Name
-      value: Right Wind Upgrade
+      value: Right Carbon Offset Upgrade
       objectReference: {fileID: 0}
     - target: {fileID: 4599768439456679051, guid: 65316587af02d8c46a94137f91bc16c3, type: 3}
       propertyPath: m_Pivot.x
