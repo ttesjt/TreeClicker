@@ -12,6 +12,7 @@ public class PlayerClick : MonoBehaviour
 
     private int profitValue = 0;
 
+    public float earthDamageRatio = 1;
 
     public GameObject finalStage;
     public TextMeshProUGUI winText;
@@ -50,7 +51,11 @@ public class PlayerClick : MonoBehaviour
             foreach (Upgrades upgrade in allUpgrades) {
                 currentAutoRate += upgrade.getCurrentAutoClickRate();
                 CutTrees(upgrade.getCurrentAutoClickRate());
-                HealTheEarth(upgrade.healEarthAmount);
+                if (upgrade.healIsReady)
+                {
+                    HealTheEarth(upgrade.healEarthAmount);
+                    upgrade.healIsReady = false;
+                }
 
                 switch (upgrade.upgradeId)
                 {

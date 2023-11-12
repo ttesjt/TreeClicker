@@ -7,9 +7,9 @@ using TMPro;
 public class GameRunner : MonoBehaviour
 {
     public static GameRunner currentInstance;
-    public static int profitToWin = 1000;
-    public static int earthHealth = 1000; // a random huge number.
-    public static int maxEarthHealth = 1200;
+    public static int profitToWin = 500;
+    public static int earthHealth = 800; // a random huge number.
+    public static int maxEarthHealth = 800;
 
     public static string winner = "";
 

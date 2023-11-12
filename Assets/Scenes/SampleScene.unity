@@ -589,6 +589,7 @@ MonoBehaviour:
   playerID: Player 2
   fillBar: {fileID: 692028963}
   profitText: {fileID: 746632347}
+  earthDamageRatio: 1
   finalStage: {fileID: 1644463967}
   winText: {fileID: 480084056}
   offerBoard: {fileID: 59908658}
@@ -597,6 +598,8 @@ MonoBehaviour:
   - {fileID: 600089886}
   - {fileID: 1146182207}
   - {fileID: 1855667760}
+  - {fileID: 2114604080}
+  - {fileID: 1540895911}
   clickMultiplierText: {fileID: 260680463}
   autoClickRateText: {fileID: 496422211}
   chainsawNumText: {fileID: 554929589}
@@ -1480,7 +1483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234.98, y: 47}
+  m_AnchoredPosition: {x: 214.98, y: 47}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &319977027
@@ -2501,7 +2504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234.2, y: 481.8}
+  m_AnchoredPosition: {x: 227, y: 470.15}
   m_SizeDelta: {x: 394.92, y: 59.96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522077620
@@ -2734,7 +2737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234.98, y: 177.00002}
+  m_AnchoredPosition: {x: 214.98, y: 177.00002}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &554929588
@@ -3038,13 +3041,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 7959541296362815590, guid: 791cba83f85e1104eaac5ea4d525d445, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 150
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &600089884
@@ -3106,6 +3110,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 1
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 10
   availableAfterEarthShowUp: 0
 --- !u!1 &624795922
@@ -3231,6 +3236,7 @@ MonoBehaviour:
   playerID: Player 1
   fillBar: {fileID: 1041282580}
   profitText: {fileID: 776905733}
+  earthDamageRatio: 1
   finalStage: {fileID: 1644463967}
   winText: {fileID: 480084056}
   offerBoard: {fileID: 1428148551}
@@ -3239,6 +3245,8 @@ MonoBehaviour:
   - {fileID: 2017148883}
   - {fileID: 1687403991}
   - {fileID: 2049391265}
+  - {fileID: 597251205}
+  - {fileID: 1779422122}
   clickMultiplierText: {fileID: 216759943}
   autoClickRateText: {fileID: 811975007}
   chainsawNumText: {fileID: 2135481654}
@@ -5380,13 +5388,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 7769591290317521939, guid: 26532fd5e3ee5204895b782c5fd29a4b, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 100
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 5
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1115215918
@@ -5610,6 +5619,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 15
   availableAfterEarthShowUp: 0
 --- !u!1 &1190556531
@@ -5879,7 +5889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: -82}
+  m_AnchoredPosition: {x: 215, y: -82}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1243399446
@@ -6954,7 +6964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533261835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 289, y: 251.00002, z: -10023.749}
+  m_LocalPosition: {x: 269, y: 251.00002, z: -10023.749}
   m_LocalScale: {x: 92.71967, y: 92.71967, z: 92.71967}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7038,7 +7048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539534156}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 278, y: 112, z: -10023.749}
+  m_LocalPosition: {x: 258, y: 112, z: -10023.749}
   m_LocalScale: {x: 27.685593, y: 27.685593, z: 27.685593}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7149,13 +7159,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 7769591290317521939, guid: 122fb3981f9bc134ba24632d1f390a03, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 100
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1559777125
@@ -7551,6 +7562,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 15
   availableAfterEarthShowUp: 0
 --- !u!1 &1729668688
@@ -7586,13 +7598,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 773135878053626780, guid: dbeb6d709b0573541a5676c4999656d8, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 100
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 5
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!4 &1729668690
@@ -7666,13 +7679,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 5460943651544920081, guid: e2eab8d986dc4384d8bf565703042517, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 100
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &1784999035
@@ -7944,6 +7958,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 35
   availableAfterEarthShowUp: 0
 --- !u!1 &1904327009
@@ -8263,6 +8278,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 1
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 10
   availableAfterEarthShowUp: 0
 --- !u!1 &2028042306
@@ -8290,7 +8306,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028042306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 281, y: -11.000002, z: -10023.749}
+  m_LocalPosition: {x: 261, y: -11.000002, z: -10023.749}
   m_LocalScale: {x: 30.015556, y: 30.015556, z: 30.015556}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8408,6 +8424,7 @@ MonoBehaviour:
   currentPurchaseLevel: 0
   additionalClick: 0
   healEarthAmount: 0
+  healIsReady: 0
   availableAfterProfitLevel: 35
   availableAfterEarthShowUp: 0
 --- !u!1 &2061745381
@@ -8685,13 +8702,14 @@ MonoBehaviour:
   UIPrefab: {fileID: 7769591290317521939, guid: 2c85d6e6a15a4364e8b870ade30cd383, type: 3}
   upgradeId: save
   baseAutoClickRate: 0
-  baseCost: 10
-  costMultiplierPerLevel: 1.5
+  baseCost: 150
+  costMultiplierPerLevel: 1
   minRate: 0.5
   maxRate: 2
   currentPurchaseLevel: 0
   additionalClick: 0
-  healEarthAmount: 0
+  healEarthAmount: 200
+  healIsReady: 0
   availableAfterProfitLevel: -1
   availableAfterEarthShowUp: 1
 --- !u!1 &2135481652
