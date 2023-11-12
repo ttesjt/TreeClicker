@@ -62,8 +62,10 @@ public class GameRunner : MonoBehaviour
         }
     }
 
+    private bool lost = false;
     public void LoseGame() {
-        if (winner == "") {
+        if (!lost) {
+            lost = true;
             if (loseClip) {audio.PlayOneShot(loseClip);}
             finalStage.SetActive(true);
             finalStageDisplay.text = "In your reckless pursuits for profit, you both managed to ruin the entire earth, killing everyone in the process. Great going genius.";
